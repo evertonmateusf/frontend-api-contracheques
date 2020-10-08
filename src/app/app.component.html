@@ -1,0 +1,11 @@
+<div *ngIf="router.url !== '/login'">
+  <div class="po-wrapper">
+    <po-menu [p-menus]="menus"></po-menu>
+    <router-outlet></router-outlet>
+  </div>
+</div>
+<div *ngIf="router.url === '/login'">
+  <div class="po-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</div>

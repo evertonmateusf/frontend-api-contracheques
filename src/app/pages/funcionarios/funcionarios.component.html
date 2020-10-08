@@ -1,0 +1,80 @@
+<po-page-default>
+  <po-container p-no-border="true">
+    <h3>Funcionários</h3>
+    <po-table
+      p-hide-columns-manager
+      p-sort="true"
+      [p-columns]="columns"
+      [p-items]="funcionarios"
+      [p-striped]="true"
+      p-selectable="true"
+      p-height="300"
+      p-single-select="true"
+      p-click="onExpandDetail($event)"
+      (p-selected)="onExpandDetail($event)"
+    >
+    </po-table>
+  </po-container>
+  <po-divider></po-divider>
+  <po-container p-no-border="true" *ngIf="funcionario">
+    <div p-no-border="true" *ngIf="funcionario">
+      <h3>Contracheque {{ funcionario?.nome }}</h3>
+      <div class="po-row" *ngIf="contracheque">
+        <po-input
+          p-clean="false"
+          p-disabled="true"
+          class="po-md-2"
+          name="mesReferencia"
+          [(ngModel)]="contracheque.mesReferencia"
+          p-clean
+          p-label="Mês"
+        >
+        </po-input>
+        <po-input
+          p-clean="false"
+          p-disabled="true"
+          class="po-md-2"
+          name="salarioBruto"
+          [(ngModel)]="contracheque.salarioBruto"
+          p-clean
+          p-label="Salário bruto"
+        >
+        </po-input>
+        <po-input
+          p-clean="false"
+          p-disabled="true"
+          class="po-md-2"
+          name="salarioLiquido"
+          [(ngModel)]="contracheque.salarioLiquido"
+          p-clean
+          p-label="Salário Líquido"
+        >
+        </po-input>
+        <po-input
+          p-clean="false"
+          p-disabled="true"
+          class="po-md-2"
+          name="totalDescontos"
+          [(ngModel)]="contracheque.totalDescontos"
+          p-clean
+          p-label="Total de descontos"
+        >
+        </po-input>
+        <po-divider></po-divider>
+        <div class="po-row" *ngIf="contracheque">
+          <po-table
+            class="po-sm-12"
+            p-hide-columns-manager
+            p-sort="true"
+            p-height="200"
+            [p-columns]="columnsLancamento"
+            [p-items]="contracheque.lancamentos"
+            [p-striped]="true"
+          >
+          </po-table>
+        </div>
+        <po-divider></po-divider>
+      </div>
+    </div>
+  </po-container>
+</po-page-default>

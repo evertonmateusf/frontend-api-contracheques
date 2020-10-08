@@ -1,0 +1,32 @@
+<po-container p-no-border="true">
+  <div class="text-center">
+    <h3 style="color: #f29559">Desafio Api Contracheques</h3>
+  </div>
+  <br />
+  <div id="login-box" class="po-md-12">
+    <form
+      [formGroup]="form"
+      (ngSubmit)="logar()"
+      id="login-form"
+      class="form"
+      action=""
+      method="post"
+    >
+      <div class="form-group">
+        <po-login p-label="Login" formControlName="email"> </po-login>
+      </div>
+      <div class="form-group">
+        <po-password p-label="Senha" formControlName="senha"> </po-password>
+      </div>
+      <div class="form-group">
+        <po-button
+          class="po-sm-12"
+          p-label="ENTRAR"
+          (click)="logar()"
+          p-type="primary"
+        >
+        </po-button>
+      </div>
+    </form>
+  </div>
+</po-container>

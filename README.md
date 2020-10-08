@@ -1,15 +1,19 @@
-# frontend-api-contracheques
-Frontend em Angular(PO-UI) consumindo as APIs do repositório api-contracheques
-O intuito é ser uma aplicação simples que permita:
-[x] Fazer login e logout
-[x] Listar os funcionários
-[x] Listar os contracheques
+# Frontend Contracheques
+Este projeto consome algumas das APIs do projeto api-contracheques. Por simplicidade foram implementadas apenas as funcionalidades:
+[x] Login  
+[x] Logout  
+[x] Listar Funcionários  
+[x] Listar Contracheque do Funcionário  
 
-# Inicialização do ambiente
+# Rodando localmente
+- Fazer clone do projeto
+- Instalar dependências do Angular
 ```
-cd contracheques
 npm install
-ng serve
 ```
-# Build
-ng build --aot --prod
+- Alterar a url do backend, se necessário, no arquivo `src\config\api.config.ts`
+
+# Versão de demonstração
+Uma versão de demonstração da aplicação está hospedada no Heroku [aqui](https://api-contracheques.herokuapp.com)  
+Usuário: everton.mfernandes@gmail.com  
+Senha: 1234  
