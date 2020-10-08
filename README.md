@@ -1,5 +1,6 @@
 # Frontend Contracheques
-Este projeto consome algumas das APIs do projeto api-contracheques. Por simplicidade foram implementadas apenas as funcionalidades:  
+Este projeto consome algumas das APIs do projeto de backend [api-contracheques](https://github.com/evertonmateusf/api-contracheques).  
+Por simplicidade foram implementadas apenas as funcionalidades:  
 [x] Login  
 [x] Logout  
 [x] Listar Funcionários  
@@ -14,6 +15,6 @@ npm install
 - Alterar a url do backend, se necessário, no arquivo `src\config\api.config.ts`
 
 # Versão de demonstração
-Uma versão de demonstração da aplicação está hospedada no Heroku [aqui](https://boiling-woodland-03363.herokuapp.com)  
+Uma versão de demonstração da aplicação está hospedada no Heroku [aqui](https://frontend-api-contracheques.herokuapp.com/)  
 Usuário: everton.mfernandes@gmail.com  
 Senha: 1234  
